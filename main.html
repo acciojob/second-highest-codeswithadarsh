@@ -9,12 +9,34 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+
+			if(arr.length === 0] ){
+				console.log("-Infinity");
+			}
+			else if(arr.length === 1){
+				console.log("-Infinity");
+			}
+			else if(new.Set(arr).size === 1){
+				console.log("-Infinity");
+			}
+			
+       	let i, first, second;
+	    arr.sort();
+		let n = arr.length;
+
+			for(i= n-2; i>=0; i--){
+
+				if(arr[i] != n-1){
+					console.log(arr[i]);
+				}
+				
+			}
+		
 			
 		}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
+			// var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
