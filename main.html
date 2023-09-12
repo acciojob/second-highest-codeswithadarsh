@@ -10,27 +10,22 @@
 	<script>
 		function secondHighest(arr) {
 
-			if(arr.length === 0] ){
-				console.log("-Infinity");
-			}
+			if (arr.length < 2) {
+                return -Infinity;
+            }
+
 			else if(arr.length === 1){
-				console.log("-Infinity");
+				return -Infinity;
 			}
-			else if(new.Set(arr).size === 1){
-				console.log("-Infinity");
-			}
+			  const uniqueElements = new Set(arr);
+            if (uniqueElements.size === 1) {
+                return -Infinity;
+            }
 			
-       	let i, first, second;
-	    arr.sort();
-		let n = arr.length;
+       	  arr.sort((a, b) => b - a);
 
-			for(i= n-2; i>=0; i--){
-
-				if(arr[i] != n-1){
-					console.log(arr[i]);
-				}
-				
-			}
+            return arr[1];
+		
 		
 			
 		}
